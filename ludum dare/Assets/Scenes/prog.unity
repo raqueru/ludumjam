@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 425817448}
   - component: {fileID: 425817447}
   - component: {fileID: 425817446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstaculo (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425817444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.08, y: 0.63, z: 0}
+  m_LocalPosition: {x: 11.33, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -734,6 +734,10 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 1114831205}
+    - target: {fileID: 3269488932134268066, guid: 2cccb31dc1d25d74a94a0cbdcf7e9be2, type: 3}
+      propertyPath: playerspeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3269488932134268068, guid: 2cccb31dc1d25d74a94a0cbdcf7e9be2, type: 3}
       propertyPath: contador
       value: 
@@ -794,6 +798,18 @@ PrefabInstance:
     - target: {fileID: 4214905411425739649, guid: 238ab81de43cd7244ac73f6e71687dc7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724793616485930299, guid: 238ab81de43cd7244ac73f6e71687dc7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724793616485930300, guid: 238ab81de43cd7244ac73f6e71687dc7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724793616485930300, guid: 238ab81de43cd7244ac73f6e71687dc7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 238ab81de43cd7244ac73f6e71687dc7, type: 3}

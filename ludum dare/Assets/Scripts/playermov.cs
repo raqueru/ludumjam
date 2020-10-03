@@ -50,7 +50,7 @@ public class playermov : MonoBehaviour
     void changelayer()
     {
        if( Input.GetKey(KeyCode.UpArrow)){
-            transform.position = new Vector2(transform.position.x, foreground.transform.position.y);
+            transform.position = new Vector2(transform.position.x, foreground.transform.position.y+0.5f);
             this.gameObject.layer = 8;
             
         }
@@ -58,7 +58,7 @@ public class playermov : MonoBehaviour
         else if (Input.GetKey(KeyCode.DownArrow))
         {
 
-            transform.position = new Vector2(transform.position.x, ground.transform.position.y);
+            transform.position = new Vector2(transform.position.x, ground.transform.position.y+0.5f);
             this.gameObject.layer = 0;
         }
     }
