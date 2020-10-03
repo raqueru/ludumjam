@@ -13,7 +13,7 @@ public class loopCenario : MonoBehaviour
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
+        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width*2, Screen.height*2, mainCamera.transform.position.z));
         foreach (GameObject obj in cenarios)
         {
             loadChildObjects(obj);
