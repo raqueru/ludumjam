@@ -17,7 +17,9 @@ public class cameramov : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        Vector3 targetPosition = new Vector3(transfPlayer.position.x, transform.position.y, transform.position.z);
+
         //A: move-se junto com o player 
-        transform.position = Vector3.Lerp(transform.position, transfPlayer.position + new Vector3(0, 0, -10), moveSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPosition+ new Vector3(0, 0, -10), moveSpeed * Time.deltaTime);
     }
 }
