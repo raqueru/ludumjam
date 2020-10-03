@@ -7,6 +7,7 @@ public class cameramov : MonoBehaviour
     public GameObject Alvo;
     public float moveSpeed;
     private Transform transfPlayer;
+    public Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,6 @@ public class cameramov : MonoBehaviour
         Vector3 targetPosition = new Vector3(transfPlayer.position.x, transform.position.y, transform.position.z);
 
         //A: move-se junto com o player 
-        transform.position = Vector3.Lerp(transform.position, targetPosition+ new Vector3(0, 0, -10), moveSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPosition+ offset, moveSpeed * Time.deltaTime);
     }
 }
