@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class obtaclemanager : MonoBehaviour
 {
-    public Text contador;
+    private Text contador;
     public int mortes;
-    private void Update()
+    private void Start()
     {
-
+        contador = GameObject.Find("num").GetComponent<Text>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
