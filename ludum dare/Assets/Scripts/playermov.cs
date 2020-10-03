@@ -10,7 +10,9 @@ public class playermov : MonoBehaviour
     private Vector2 movement;
     private bool grounded;
     public Transform foreground;
- 
+    public Transform ground;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,13 @@ public class playermov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          changelayer();
+          
           rb.transform.position = rb.position + Vector2.right*playerspeed * Time.fixedDeltaTime; //movimenta o personagem
           if (Input.GetKey(KeyCode.Space)&& grounded){
             rb.velocity = jumpforce * Vector2.up;
 
         }
+          changelayer();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -54,8 +57,8 @@ public class playermov : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            
-            rb.transform.position = new Vector2(0, 1);
+
+            transform.position = new Vector2(transform.position.x, ground.transform.position.y);
             this.gameObject.layer = 0;
         }
     }
