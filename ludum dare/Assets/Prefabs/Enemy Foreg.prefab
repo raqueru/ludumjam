@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7683530948697147922}
   - component: {fileID: 7683530948697147925}
   - component: {fileID: 7683530948697147923}
+  - component: {fileID: 660064706352359810}
+  - component: {fileID: 643169186}
   m_Layer: 8
   m_Name: Enemy Foreg
   m_TagString: Obstacle
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7683530948697147927}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.73, y: 1.3, z: 13.395359}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -109,3 +111,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &660064706352359810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7683530948697147927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d66b10ef34282147b49ca50c37d6c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &643169186
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7683530948697147927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ede6eb9801d7014da88d56265dca72f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
