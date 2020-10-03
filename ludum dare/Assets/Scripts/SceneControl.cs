@@ -16,9 +16,14 @@ public class SceneControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R))
         {
-            string currentscene = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentscene);
+            restartgame();
         }
 
+    }
+    public void restartgame()
+    {
+        string currentscene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentscene);
+        Time.timeScale = 1;
     }
 }
