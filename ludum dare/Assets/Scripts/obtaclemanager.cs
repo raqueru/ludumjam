@@ -16,7 +16,7 @@ public class obtaclemanager : MonoBehaviour
         {
             mortes++;
             Deathcounter(contador, mortes);
-            Debug.Log("MATOOO");
+           
         }
     }
 
