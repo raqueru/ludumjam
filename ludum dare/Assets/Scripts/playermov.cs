@@ -5,6 +5,7 @@ using UnityEngine;
 public class playermov : MonoBehaviour
 {
     public float jumpforce;
+    public float playerspeed;
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool grounded;
@@ -17,7 +18,7 @@ public class playermov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          rb.transform.position = rb.position + Vector2.right * Time.fixedDeltaTime; //movimenta o personagem
+          rb.transform.position = rb.position + Vector2.right*playerspeed * Time.fixedDeltaTime; //movimenta o personagem
           if (Input.GetKey(KeyCode.Space)&& grounded){
             rb.velocity = jumpforce * Vector2.up;
 
