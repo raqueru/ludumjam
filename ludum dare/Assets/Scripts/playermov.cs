@@ -61,9 +61,10 @@ public class playermov : MonoBehaviour
             float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
             float foregroundyupper = foregroundcentery + foregroundhalfy;
             Vector2 NewPos = new Vector2(transform.position.x,foregroundyupper+ playerboxhalf);
-            transform.position = Vector2.Lerp(transform.position, NewPos, 10*Time.deltaTime) ;
+            transform.position = Vector2.Lerp(transform.position, NewPos, 30*Time.deltaTime) ;
             yield return new WaitForSeconds(0.1f);
             this.gameObject.layer = 8;
+            yield return new WaitForSeconds(0.1f);
             foregrounded = true;
 
         }
@@ -74,10 +75,10 @@ public class playermov : MonoBehaviour
             float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
             float groundyupper = groundcentery + groundhalfy;
             Vector2 NewPos = new Vector2(transform.position.x,groundyupper+playerboxhalf);
-            transform.position = Vector2.Lerp(transform.position, NewPos, 20*Time.deltaTime);
+            transform.position = Vector2.Lerp(transform.position, NewPos, 30*Time.deltaTime);
             yield return new WaitForSeconds(0.1f);
             this.gameObject.layer = 0;
-            
+            yield return new WaitForSeconds(0.1f);
             foregrounded = false;
         }
     }
