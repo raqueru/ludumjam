@@ -11,24 +11,28 @@ public class playermov : MonoBehaviour
     private bool grounded;
     public Transform ground;
     public Transform foreground;
+    private bool foregrounded = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-          
-          rb.transform.position = rb.position + Vector2.right*playerspeed * Time.fixedDeltaTime; //movimenta o personagem
-          if (Input.GetKey(KeyCode.Space)&& grounded){
+
+         rb.transform.position = rb.position + Vector2.right * playerspeed * Time.fixedDeltaTime; //movimenta o personagem
+        if (Input.GetKey(KeyCode.Space) && grounded)
+        {
             rb.velocity = jumpforce * Vector2.up;
 
+
         }
-          changelayer();
+        StartCoroutine( changelayer());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,19 +51,34 @@ public class playermov : MonoBehaviour
         }
     }
 
-    void changelayer()
+    IEnumerator changelayer()
     {
-       if( Input.GetKey(KeyCode.UpArrow)){
-            transform.position = new Vector2(transform.position.x, foreground.transform.position.y+0.5f);
+        float playerboxhalf = GetComponent<BoxCollider2D>().bounds.extents.y;
+        Vector3 playerpos = new Vector3(transform.position.x, 0, 0);
+        if (Input.GetKey(KeyCode.UpArrow)&&!foregrounded)
+        {
+            float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
+            float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
+            float foregroundyupper = foregroundcentery + foregroundhalfy;
+            Vector2 NewPos = new Vector2(transform.position.x,foregroundyupper+ playerboxhalf);
+            transform.position = Vector2.Lerp(transform.position, NewPos, 10*Time.deltaTime) ;
+            yield return new WaitForSeconds(0.1f);
             this.gameObject.layer = 8;
-            
+            foregrounded = true;
+
         }
 
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow)&&foregrounded)
         {
-
-            transform.position = new Vector2(transform.position.x, ground.transform.position.y+0.5f);
+            float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
+            float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
+            float groundyupper = groundcentery + groundhalfy;
+            Vector2 NewPos = new Vector2(transform.position.x,groundyupper+playerboxhalf);
+            transform.position = Vector2.Lerp(transform.position, NewPos, 20*Time.deltaTime);
+            yield return new WaitForSeconds(0.1f);
             this.gameObject.layer = 0;
+            
+            foregrounded = false;
         }
     }
 }

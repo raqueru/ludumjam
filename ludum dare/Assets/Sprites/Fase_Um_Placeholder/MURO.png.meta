@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 0379ff7bb640e3c4fb6336bd66f4a348
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4840630425501402525
+    second: MURO_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,7 +54,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -73,10 +76,60 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: MURO_0
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 609
+        width: 6606
+        height: 1047
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9585f8a9bf5d2340800000000000000
+      internalID: 4840630425501402525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 3006.5918, y: 411.78622}
+      - {x: -681.15234, y: 411.78622}
+      - {x: -919.18945, y: 386.16397}
+      - {x: -922.85156, y: 364.20206}
+      - {x: -922.85156, y: 312.95752}
+      - {x: -922.85156, y: 386.16397}
+      - {x: -904.541, y: 411.78622}
+      - {x: -3416.748, y: 411.78622}
+      - {x: -3460.6934, y: 342.2401}
+      - {x: -3460.6934, y: -638.7262}
+      - {x: -3453.3691, y: -646.0468}
+      - {x: 3149.414, y: -646.0468}
+      - {x: 3156.7383, y: -638.7262}
+      - {x: 3156.7383, y: 331.25916}
+    - - {x: -2988.2812, y: 327.59882}
+      - {x: -2991.9434, y: 312.95752}
+      - {x: -2988.2812, y: 312.95752}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
