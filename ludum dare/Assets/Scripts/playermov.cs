@@ -9,8 +9,8 @@ public class playermov : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool grounded;
-    public Transform foreground;
     public Transform ground;
+    public Transform foreground;
 
 
     // Start is called before the first frame update
