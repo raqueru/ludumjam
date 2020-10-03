@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 75396f6af7d637b40959a7db762f890b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2591686157815323113
+    second: LAPIDES_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,11 +44,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.48, y: 0.4}
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 384, y: 600, z: 722, w: 1108}
   spriteGenerateFallbackPhysicsShape: 0
@@ -87,7 +90,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LAPIDES_0
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 606
+        width: 6581
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716ee1abb2b780cd0800000000000000
+      internalID: -2591686157815323113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
