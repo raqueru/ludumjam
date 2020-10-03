@@ -11,13 +11,14 @@ public class playermov : MonoBehaviour
     private bool grounded;
     public Transform ground;
     public Transform foreground;
+    private bool foregrounded = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-
+        
     }
 
     // Update is called once per frame
@@ -52,36 +53,29 @@ public class playermov : MonoBehaviour
 
     void changelayer()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        float playerboxhalf = GetComponent<BoxCollider2D>().bounds.extents.y;
+        Vector3 playerpos = new Vector3(transform.position.x, 0, 0);
+        if (Input.GetKeyDown(KeyCode.UpArrow)&&!foregrounded)
         {
-
-            Vector3 playerpos = new Vector3(transform.position.x, 0, 0);
-            //get the extents
-            var foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
-            //get the center
-            var foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
-            //get the up border
+            float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
+            float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
             float foregroundyupper = foregroundcentery + foregroundhalfy;
-            //get the lower border
-           
-
-            //Vector3 groundpos = new Vector3(0, yCenter, 0);
-            // transform.position=Vector3.Lerp(playerpos,groundpos, 5 * Time.deltaTime);
-
-            transform.position = new Vector2(transform.position.x,foregroundyupper);
+            transform.position = new Vector2(transform.position.x,foregroundyupper+ playerboxhalf);
             this.gameObject.layer = 8;
+            foregrounded = true;
 
         }
 
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow)&&foregrounded)
         {
-            var groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
+            float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
             //get the center
-            var groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
+            float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
             //get the up border
             float groundyupper = groundcentery + groundhalfy;
-            transform.position = new Vector2(transform.position.x, groundyupper);
+            transform.position = new Vector2(transform.position.x,groundyupper+playerboxhalf);
             this.gameObject.layer = 0;
+            foregrounded = false;
         }
     }
 }
