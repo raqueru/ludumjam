@@ -76,7 +76,7 @@ public class playermov : MonoBehaviour
             Vector2 NewPos = new Vector2(transform.position.x,groundyupper+playerboxhalf);
             this.gameObject.layer = 0;
             yield return new WaitForSeconds(0.1f);
-            transform.position = Vector2.Lerp(transform.position, NewPos,  Time.deltaTime);
+            transform.position = Vector2.Lerp(transform.position, NewPos,10*Time.deltaTime);
             foregrounded = false;
         }
     }
