@@ -12,6 +12,8 @@ public class playermov : MonoBehaviour
     public Transform ground;
     public Transform foreground;
     private bool foregrounded = false;
+    public float fallMultiplier;
+    public Vector2 temp;
 
 
     // Start is called before the first frame update
@@ -25,12 +27,16 @@ public class playermov : MonoBehaviour
     void FixedUpdate()
     {
 
+
          rb.transform.position = rb.position + Vector2.right * playerspeed * Time.fixedDeltaTime; //movimenta o personagem
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
-            rb.velocity = jumpforce * Vector2.up;
-
-
+            rb.velocity = jumpforce * Vector2.up;  
+        }
+        if (rb.velocity.y < 0)
+        {
+            Debug.Log("papapa");
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         StartCoroutine( changelayer());
     }
