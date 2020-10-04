@@ -61,31 +61,37 @@ public class playermov : MonoBehaviour
     {
         float playerboxhalf = GetComponent<BoxCollider2D>().bounds.extents.y;
         Vector3 playerpos = new Vector3(transform.position.x, 0, 0);
-        if (Input.GetKey(KeyCode.UpArrow)&&!foregrounded)
-        {
-            float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
-            float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
-            float foregroundyupper = foregroundcentery + foregroundhalfy;
-            Vector2 NewPos = new Vector2(transform.position.x,foregroundyupper+ playerboxhalf);
-            transform.position = Vector2.Lerp(transform.position, NewPos, 30*Time.deltaTime) ;
-            yield return new WaitForSeconds(0.1f);
-            this.gameObject.layer = 8;
-            yield return new WaitForSeconds(0.1f);
-            foregrounded = true;
+        if (Input.GetKey(KeyCode.UpArrow) && !foregrounded)
+            if (grounded)
+            {
+                {
+                    float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
+                    float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
+                    float foregroundyupper = foregroundcentery + foregroundhalfy;
+                    Vector2 NewPos = new Vector2(transform.position.x, foregroundyupper + playerboxhalf);
+                    transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
+                    yield return new WaitForSeconds(0.1f);
+                    this.gameObject.layer = 8;
+                    yield return new WaitForSeconds(0.1f);
+                    foregrounded = true;
+                }
+            }
 
-        }
+            else if (Input.GetKey(KeyCode.DownArrow) && foregrounded)
+            {
+                if (grounded)
+                {
 
-        else if (Input.GetKey(KeyCode.DownArrow)&&foregrounded)
-        {
-            float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
-            float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
-            float groundyupper = groundcentery + groundhalfy;
-            Vector2 NewPos = new Vector2(transform.position.x,groundyupper+playerboxhalf);
-            transform.position = Vector2.Lerp(transform.position, NewPos, 30*Time.deltaTime);
-            yield return new WaitForSeconds(0.1f);
-            this.gameObject.layer = 0;
-            yield return new WaitForSeconds(0.1f);
-            foregrounded = false;
-        }
+                    float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
+                    float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
+                    float groundyupper = groundcentery + groundhalfy;
+                    Vector2 NewPos = new Vector2(transform.position.x, groundyupper + playerboxhalf);
+                    transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
+                    yield return new WaitForSeconds(0.1f);
+                    this.gameObject.layer = 0;
+                    yield return new WaitForSeconds(0.1f);
+                    foregrounded = false;
+                }
+            }
     }
 }
