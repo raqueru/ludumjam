@@ -8,46 +8,44 @@ public class playermov : MonoBehaviour
     public float playerspeed;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private bool grounded;
+    public bool grounded;
     public Transform ground;
     public Transform foreground;
-    private bool foregrounded = false;
+    public bool foregrounded = false;
     public float fallMultiplier;
     public Vector2 temp;
-
-
+    public bool canchange;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
         rb.transform.position = rb.position + Vector2.right * playerspeed * Time.fixedDeltaTime; //movimenta o personagem
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             rb.velocity = jumpforce * Vector2.up;
+            canchange = false;
         }
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        StartCoroutine(changelayer());
+        if (grounded)
+        {
+            canchange=true;
+            StartCoroutine(changelayer());
+        }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             grounded = true;
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -55,7 +53,6 @@ public class playermov : MonoBehaviour
             grounded = false;
         }
     }
-
     IEnumerator changelayer()
     {
         float playerboxhalf = GetComponent<BoxCollider2D>().bounds.extents.y;
@@ -67,11 +64,9 @@ public class playermov : MonoBehaviour
             float foregroundyupper = foregroundcentery + foregroundhalfy;
             Vector2 NewPos = new Vector2(transform.position.x, foregroundyupper + playerboxhalf);
             transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
-            yield return new WaitForSeconds(0.1f);
             this.gameObject.layer = 8;
-            yield return new WaitForSeconds(0.1f);
             foregrounded = true;
-
+            yield return new WaitForSeconds(0.1f);
         }
 
         else if (Input.GetKey(KeyCode.DownArrow) && foregrounded)
@@ -81,10 +76,10 @@ public class playermov : MonoBehaviour
             float groundyupper = groundcentery + groundhalfy;
             Vector2 NewPos = new Vector2(transform.position.x, groundyupper + playerboxhalf);
             transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.0001f);
             this.gameObject.layer = 0;
-            yield return new WaitForSeconds(0.1f);
             foregrounded = false;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
