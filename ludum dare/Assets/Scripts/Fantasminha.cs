@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Fantasminha : MonoBehaviour
 {
+
     public playermov Player;
     //public Vector2 playerPosition;
     Vector2 myPosition;
@@ -17,6 +18,7 @@ public class Fantasminha : MonoBehaviour
         myPosition = new Vector2(transform.position.x, transform.position.y);
 
         Player = GameObject.FindObjectOfType<playermov>();
+
     }
 
 
