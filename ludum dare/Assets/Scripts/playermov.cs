@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Packages.Rider.Editor.UnitTesting;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class playermov : MonoBehaviour
     public Vector2 temp;
     public bool canchange;
     private Animator animator;
+    float lerpDuration = 0.2f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +43,7 @@ public class playermov : MonoBehaviour
         {
             animator.SetBool("jumping", false);
             canchange =true;
-            StartCoroutine(changelayer());
+            changelayer();
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -57,20 +60,46 @@ public class playermov : MonoBehaviour
             grounded = false;
         }
     }
-    IEnumerator changelayer()
+    IEnumerator lerpcode(float ypos,int layer,bool fore)
+    {
+       Vector2 NewPos;
+        
+
+        float timeElapsed = 0;
+        rb.gravityScale = 0;
+        while (timeElapsed < lerpDuration)
+        {
+            Vector2 StartPos = new Vector2(transform.position.x,transform.position.y) ;
+            NewPos = new Vector2(transform.position.x, ypos+0.1f);
+             
+            transform.position = Vector2.Lerp(transform.position, NewPos, timeElapsed / lerpDuration);
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        NewPos = new Vector2(transform.position.x, ypos + 0.1f);
+        transform.position = NewPos;
+        rb.gravityScale = 1;
+        this.gameObject.layer = layer;
+        foregrounded = fore;
+        yield return null;
+
+    }
+
+
+    void changelayer()
     {
         float playerboxhalf = GetComponent<BoxCollider2D>().bounds.extents.y;
-        Vector3 playerpos = new Vector3(transform.position.x, 0, 0);
+
         if (Input.GetKey(KeyCode.UpArrow) && !foregrounded)
         {
             float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
             float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
             float foregroundyupper = foregroundcentery + foregroundhalfy;
-            Vector2 NewPos = new Vector2(transform.position.x, foregroundyupper + playerboxhalf);
-            transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
-            this.gameObject.layer = 8;
-            foregrounded = true;
-            yield return new WaitForSeconds(0.1f);
+            Vector3 NewPos = new Vector3(transform.position.x, foregroundyupper + playerboxhalf);
+            StartCoroutine(lerpcode(foregroundyupper + playerboxhalf, 8, true));
+
+
         }
 
         else if (Input.GetKey(KeyCode.DownArrow) && foregrounded)
@@ -78,12 +107,9 @@ public class playermov : MonoBehaviour
             float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
             float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
             float groundyupper = groundcentery + groundhalfy;
-            Vector2 NewPos = new Vector2(transform.position.x, groundyupper + playerboxhalf);
-            transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
-            yield return new WaitForSeconds(0.0001f);
-            this.gameObject.layer = 0;
-            foregrounded = false;
-            yield return new WaitForSeconds(0.1f);
+            Vector2 NewPos = new Vector2(transform.position.x, groundcentery + playerboxhalf);
+            StartCoroutine(lerpcode(groundyupper + playerboxhalf, 0, false));
+
         }
     }
 }
