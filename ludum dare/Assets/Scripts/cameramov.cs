@@ -6,7 +6,7 @@ public class cameramov : MonoBehaviour
 { 
     public GameObject Alvo;
     public float moveSpeed;
-    private Transform transfPlayer;
+    private Transform  transfPlayer;
     public Vector3 offset;
 
     // Start is called before the first frame update
