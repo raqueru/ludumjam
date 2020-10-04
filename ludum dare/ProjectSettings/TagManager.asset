@@ -40,12 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: New Layer
+  - name: Sky
     uniqueID: 3652120915
     locked: 0
-  - name: Ground
+  - name: Wall
+    uniqueID: 2202739717
+    locked: 0
+  - name: Middle
+    uniqueID: 3577766347
+    locked: 0
+  - name: Floor
     uniqueID: 830413279
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
