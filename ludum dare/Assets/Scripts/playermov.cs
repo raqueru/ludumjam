@@ -20,7 +20,7 @@ public class playermov : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        
+
     }
 
     // Update is called once per frame
@@ -28,17 +28,17 @@ public class playermov : MonoBehaviour
     {
 
 
-         rb.transform.position = rb.position + Vector2.right * playerspeed * Time.fixedDeltaTime; //movimenta o personagem
+        rb.transform.position = rb.position + Vector2.right * playerspeed * Time.fixedDeltaTime; //movimenta o personagem
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
-            rb.velocity = jumpforce * Vector2.up;  
+            rb.velocity = jumpforce * Vector2.up;
         }
         if (rb.velocity.y < 0)
         {
             Debug.Log("papapa");
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        StartCoroutine( changelayer());
+        StartCoroutine(changelayer());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,36 +62,30 @@ public class playermov : MonoBehaviour
         float playerboxhalf = GetComponent<BoxCollider2D>().bounds.extents.y;
         Vector3 playerpos = new Vector3(transform.position.x, 0, 0);
         if (Input.GetKey(KeyCode.UpArrow) && !foregrounded)
-            if (grounded)
-            {
-                {
-                    float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
-                    float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
-                    float foregroundyupper = foregroundcentery + foregroundhalfy;
-                    Vector2 NewPos = new Vector2(transform.position.x, foregroundyupper + playerboxhalf);
-                    transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
-                    yield return new WaitForSeconds(0.1f);
-                    this.gameObject.layer = 8;
-                    yield return new WaitForSeconds(0.1f);
-                    foregrounded = true;
-                }
-            }
+        {
+            float foregroundhalfy = foreground.GetComponent<BoxCollider2D>().bounds.extents.y;
+            float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
+            float foregroundyupper = foregroundcentery + foregroundhalfy;
+            Vector2 NewPos = new Vector2(transform.position.x, foregroundyupper + playerboxhalf);
+            transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
+            yield return new WaitForSeconds(0.1f);
+            this.gameObject.layer = 8;
+            yield return new WaitForSeconds(0.1f);
+            foregrounded = true;
 
-            else if (Input.GetKey(KeyCode.DownArrow) && foregrounded)
-            {
-                if (grounded)
-                {
+        }
 
-                    float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
-                    float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
-                    float groundyupper = groundcentery + groundhalfy;
-                    Vector2 NewPos = new Vector2(transform.position.x, groundyupper + playerboxhalf);
-                    transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
-                    yield return new WaitForSeconds(0.1f);
-                    this.gameObject.layer = 0;
-                    yield return new WaitForSeconds(0.1f);
-                    foregrounded = false;
-                }
-            }
+        else if (Input.GetKey(KeyCode.DownArrow) && foregrounded)
+        {
+            float groundhalfy = ground.GetComponent<BoxCollider2D>().bounds.extents.y;
+            float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
+            float groundyupper = groundcentery + groundhalfy;
+            Vector2 NewPos = new Vector2(transform.position.x, groundyupper + playerboxhalf);
+            transform.position = Vector2.Lerp(transform.position, NewPos, 30 * Time.deltaTime);
+            yield return new WaitForSeconds(0.1f);
+            this.gameObject.layer = 0;
+            yield return new WaitForSeconds(0.1f);
+            foregrounded = false;
+        }
     }
 }
