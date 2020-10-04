@@ -19,7 +19,7 @@ public class playermov : MonoBehaviour
     private Animator animator;
     public float JumpTime;
     float lerpDuration = 0.2f;
-    public float timer;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +75,7 @@ public class playermov : MonoBehaviour
             grounded = false;
         }
     }
-    IEnumerator lerpcode(float ypos, int layer, bool fore)
+    IEnumerator lerpcode(float ypos, int layer, bool fore, int layerpos)
     {
         Vector2 NewPos;
 
@@ -97,6 +97,7 @@ public class playermov : MonoBehaviour
         rb.gravityScale = 1;
         this.gameObject.layer = layer;
         foregrounded = fore;
+        this.GetComponent<SpriteRenderer>().sortingOrder = layerpos;
         yield return null;
 
     }
@@ -112,7 +113,7 @@ public class playermov : MonoBehaviour
             float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
             float foregroundyupper = foregroundcentery + foregroundhalfy;
             Vector3 NewPos = new Vector3(transform.position.x, foregroundyupper + playerboxhalf);
-            StartCoroutine(lerpcode(foregroundyupper + playerboxhalf, 8, true));
+            StartCoroutine(lerpcode(foregroundyupper + playerboxhalf, 8, true,0));
 
 
         }
@@ -123,7 +124,7 @@ public class playermov : MonoBehaviour
             float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
             float groundyupper = groundcentery + groundhalfy;
             Vector2 NewPos = new Vector2(transform.position.x, groundcentery + playerboxhalf);
-            StartCoroutine(lerpcode(groundyupper + playerboxhalf, 0, false));
+            StartCoroutine(lerpcode(groundyupper + playerboxhalf, 0, false,1));
 
         }
     }
