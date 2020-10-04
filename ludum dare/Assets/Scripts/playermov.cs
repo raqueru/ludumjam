@@ -15,10 +15,12 @@ public class playermov : MonoBehaviour
     public float fallMultiplier;
     public Vector2 temp;
     public bool canchange;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        animator = this.GetComponent<Animator>();
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -26,6 +28,7 @@ public class playermov : MonoBehaviour
         rb.transform.position = rb.position + Vector2.right * playerspeed * Time.fixedDeltaTime; //movimenta o personagem
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
+            animator.SetBool("jumping", true);
             rb.velocity = jumpforce * Vector2.up;
             canchange = false;
         }
@@ -35,7 +38,8 @@ public class playermov : MonoBehaviour
         }
         if (grounded)
         {
-            canchange=true;
+            animator.SetBool("jumping", false);
+            canchange =true;
             StartCoroutine(changelayer());
         }
     }
