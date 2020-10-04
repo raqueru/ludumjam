@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: f31fe51ac9899784587791613d755482
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -534712062511165714
+    second: Lapides_Grupo_ALTA_1_0
+  - first:
+      213: 5000151496257224958
+    second: Lapides_Grupo_ALTA_1_1
+  - first:
+      213: -7451846055291815169
+    second: Lapides_Grupo_ALTA_1_2
+  - first:
+      213: -5701111918670360040
+    second: Lapides_Grupo_ALTA_1_3
+  - first:
+      213: -3911704867182363903
+    second: Lapides_Grupo_ALTA_1_4
+  - first:
+      213: -3188995110153631070
+    second: Lapides_Grupo_ALTA_1_5
+  - first:
+      213: 3320103356122847708
+    second: Lapides_Grupo_ALTA_1_6
+  - first:
+      213: -2344337292976678364
+    second: Lapides_Grupo_ALTA_1_7
+  - first:
+      213: 6860590892980833151
+    second: Lapides_Grupo_ALTA_1_8
+  - first:
+      213: -2792283204148376172
+    second: Lapides_Grupo_ALTA_1_9
+  - first:
+      213: -2819773911386370262
+    second: Lapides_Grupo_ALTA_1_10
+  - first:
+      213: 3290015209736521865
+    second: Lapides_Grupo_ALTA_1_11
+  - first:
+      213: -5289229956595796862
+    second: Lapides_Grupo_ALTA_1_12
+  - first:
+      213: 5849208974976194755
+    second: Lapides_Grupo_ALTA_1_13
+  - first:
+      213: 4399998455705986631
+    second: Lapides_Grupo_ALTA_1_14
+  - first:
+      213: 7523273649098584207
+    second: Lapides_Grupo_ALTA_1_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -47,7 +95,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 68, y: 176, z: 55, w: 176}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -58,7 +106,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
+  ignorePngGamma: 1
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -73,9 +121,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 197
+        width: 164
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeec7e056325498f0800000000000000
+      internalID: -534712062511165714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_1
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 197
+        width: 281
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0cc8d3b4b146540800000000000000
+      internalID: 5000151496257224958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_2
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 197
+        width: 178
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa7f698e79b59890800000000000000
+      internalID: -7451846055291815169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_3
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 197
+        width: 152
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81258ee6ae491e0b0800000000000000
+      internalID: -5701111918670360040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_4
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 197
+        width: 267
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10bbd6df525d6b9c0800000000000000
+      internalID: -3911704867182363903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_5
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 197
+        width: 168
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aac5d4e7d96eb3d0800000000000000
+      internalID: -3188995110153631070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_6
+      rect:
+        serializedVersion: 2
+        x: 2267
+        y: 197
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9d8476960631e20800000000000000
+      internalID: 3320103356122847708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_7
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 197
+        width: 153
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a9c6227ad377fd0800000000000000
+      internalID: -2344337292976678364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_8
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 197
+        width: 173
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b07657117b53f50800000000000000
+      internalID: 6860590892980833151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_9
+      rect:
+        serializedVersion: 2
+        x: 3284
+        y: 197
+        width: 269
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d42705831df39d0800000000000000
+      internalID: -2792283204148376172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_10
+      rect:
+        serializedVersion: 2
+        x: 3591
+        y: 197
+        width: 146
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fc6e041962ed8d0800000000000000
+      internalID: -2819773911386370262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_11
+      rect:
+        serializedVersion: 2
+        x: 4031
+        y: 197
+        width: 168
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9884af9e66b78ad20800000000000000
+      internalID: 3290015209736521865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_12
+      rect:
+        serializedVersion: 2
+        x: 4407
+        y: 197
+        width: 157
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284b0c5c061e896b0800000000000000
+      internalID: -5289229956595796862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_13
+      rect:
+        serializedVersion: 2
+        x: 4612
+        y: 197
+        width: 283
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c89b7282909c2150800000000000000
+      internalID: 5849208974976194755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_14
+      rect:
+        serializedVersion: 2
+        x: 5183
+        y: 197
+        width: 184
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7466f94884fef0d30800000000000000
+      internalID: 4399998455705986631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Grupo_ALTA_1_15
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 197
+        width: 5240
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80f39a1689086860800000000000000
+      internalID: 7523273649098584207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

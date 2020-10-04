@@ -1,7 +1,88 @@
 fileFormatVersion: 2
 guid: c43c74ab8a92bbf409f855cad4af91db
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2245352956978274472
+    second: Lapides_Prontas_0
+  - first:
+      213: -1634625249360068420
+    second: Lapides_Prontas_1
+  - first:
+      213: -1289917894387003629
+    second: Lapides_Prontas_2
+  - first:
+      213: 3623018096591243040
+    second: Lapides_Prontas_3
+  - first:
+      213: -6556299187698028969
+    second: Lapides_Prontas_4
+  - first:
+      213: 8627680741604881783
+    second: Lapides_Prontas_5
+  - first:
+      213: -1666663869909126552
+    second: Lapides_Prontas_6
+  - first:
+      213: 2269383896639492630
+    second: Lapides_Prontas_7
+  - first:
+      213: -1232812003193839175
+    second: Lapides_Prontas_8
+  - first:
+      213: 6216871670063671189
+    second: Lapides_Prontas_9
+  - first:
+      213: -1075477081208178531
+    second: Lapides_Prontas_10
+  - first:
+      213: -3925005984369658126
+    second: Lapides_Prontas_11
+  - first:
+      213: 1175790913384961865
+    second: Lapides_Prontas_12
+  - first:
+      213: -4849472927214437838
+    second: Lapides_Prontas_13
+  - first:
+      213: 275915132775227198
+    second: Lapides_Prontas_14
+  - first:
+      213: 5945049237210787248
+    second: Lapides_Prontas_15
+  - first:
+      213: 4980540388323807918
+    second: Lapides_Prontas_16
+  - first:
+      213: 1735494013015879137
+    second: Lapides_Prontas_17
+  - first:
+      213: 5788857780141181497
+    second: Lapides_Prontas_18
+  - first:
+      213: 1699119097532403358
+    second: Lapides_Prontas_19
+  - first:
+      213: 8377755743325684416
+    second: Lapides_Prontas_20
+  - first:
+      213: 1716408470095002190
+    second: Lapides_Prontas_21
+  - first:
+      213: 4350007218404272615
+    second: Lapides_Prontas_22
+  - first:
+      213: 3875159766210317559
+    second: Lapides_Prontas_23
+  - first:
+      213: -3466779897837602481
+    second: Lapides_Prontas_24
+  - first:
+      213: -2267569248082633819
+    second: Lapides_Prontas_25
+  - first:
+      213: 6125418483842423585
+    second: Lapides_Prontas_26
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,25 +113,25 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 155
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -66,16 +147,595 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lapides_Prontas_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 149
+        width: 170
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a020143e98192f10800000000000000
+      internalID: 2245352956978274472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 149
+        width: 283
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0420f0ff4a059e0800000000000000
+      internalID: -1634625249360068420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_2
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 149
+        width: 181
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f84a3628a491ee0800000000000000
+      internalID: -1289917894387003629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_3
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 149
+        width: 161
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027022663cb874230800000000000000
+      internalID: 3623018096591243040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_4
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 149
+        width: 273
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ea31420a85305a0800000000000000
+      internalID: -6556299187698028969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_5
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 149
+        width: 175
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77576de4cedabb770800000000000000
+      internalID: 8627680741604881783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_6
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 149
+        width: 181
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862b61a6a02ded8e0800000000000000
+      internalID: -1666663869909126552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_7
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 149
+        width: 156
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612503a51a87e7f10800000000000000
+      internalID: 2269383896639492630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_8
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 149
+        width: 180
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b12bcac30c24eee0800000000000000
+      internalID: -1232812003193839175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_9
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 149
+        width: 278
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597a55478d3c64650800000000000000
+      internalID: 6216871670063671189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_10
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 149
+        width: 151
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d983382fa432311f0800000000000000
+      internalID: -1075477081208178531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_11
+      rect:
+        serializedVersion: 2
+        x: 4031
+        y: 149
+        width: 171
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f63d505ad39789c0800000000000000
+      internalID: -3925005984369658126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_12
+      rect:
+        serializedVersion: 2
+        x: 4407
+        y: 149
+        width: 161
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947517a2b9f315010800000000000000
+      internalID: 1175790913384961865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_13
+      rect:
+        serializedVersion: 2
+        x: 4607
+        y: 149
+        width: 290
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a7289f01633bcb0800000000000000
+      internalID: -4849472927214437838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_14
+      rect:
+        serializedVersion: 2
+        x: 5178
+        y: 149
+        width: 191
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fd835f95f34d300800000000000000
+      internalID: 275915132775227198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_15
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 149
+        width: 181
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bde72478ce018250800000000000000
+      internalID: 5945049237210787248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_16
+      rect:
+        serializedVersion: 2
+        x: 6057
+        y: 149
+        width: 293
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2d68b581f6e1540800000000000000
+      internalID: 4980540388323807918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_17
+      rect:
+        serializedVersion: 2
+        x: 6624
+        y: 149
+        width: 166
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ede0ab1c96b51810800000000000000
+      internalID: 1735494013015879137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_18
+      rect:
+        serializedVersion: 2
+        x: 7058
+        y: 149
+        width: 156
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a4298fa77265050800000000000000
+      internalID: 5788857780141181497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_19
+      rect:
+        serializedVersion: 2
+        x: 7283
+        y: 149
+        width: 171
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e408f11db749710800000000000000
+      internalID: 1699119097532403358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_20
+      rect:
+        serializedVersion: 2
+        x: 7503
+        y: 149
+        width: 175
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c28ae71674c34470800000000000000
+      internalID: 8377755743325684416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_21
+      rect:
+        serializedVersion: 2
+        x: 7961
+        y: 149
+        width: 269
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4afb7dd868e1d710800000000000000
+      internalID: 1716408470095002190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_22
+      rect:
+        serializedVersion: 2
+        x: 8279
+        y: 149
+        width: 151
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e92f5f84845e5c30800000000000000
+      internalID: 4350007218404272615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_23
+      rect:
+        serializedVersion: 2
+        x: 8577
+        y: 149
+        width: 170
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc0ad0a64557c530800000000000000
+      internalID: 3875159766210317559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_24
+      rect:
+        serializedVersion: 2
+        x: 8958
+        y: 149
+        width: 156
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49bceafc0683efc0800000000000000
+      internalID: -3466779897837602481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_25
+      rect:
+        serializedVersion: 2
+        x: 9338
+        y: 149
+        width: 152
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab5f6078c9f780e0800000000000000
+      internalID: -2267569248082633819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lapides_Prontas_26
+      rect:
+        serializedVersion: 2
+        x: 9617
+        y: 149
+        width: 280
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b1a0e38abd10550800000000000000
+      internalID: 6125418483842423585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

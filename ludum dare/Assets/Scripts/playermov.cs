@@ -35,7 +35,6 @@ public class playermov : MonoBehaviour
         }
         if (rb.velocity.y < 0)
         {
-            Debug.Log("papapa");
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         StartCoroutine(changelayer());
