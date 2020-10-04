@@ -1,6 +1,7 @@
 ﻿using Packages.Rider.Editor.UnitTesting;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class playermov : MonoBehaviour
@@ -9,16 +10,17 @@ public class playermov : MonoBehaviour
     public float playerspeed;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public bool grounded;
+    private bool grounded;
     public Transform ground;
     public Transform foreground;
-    public bool foregrounded = false;
+    private bool foregrounded = false;
     public float fallMultiplier;
-    public Vector2 temp;
     public bool canchange;
     private Animator animator;
+    public float JumpTime;
     float lerpDuration = 0.2f;
-    
+    public float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,17 +37,30 @@ public class playermov : MonoBehaviour
             rb.velocity = jumpforce * Vector2.up;
             canchange = false;
         }
-        if (rb.velocity.y < 0)
+        if (!grounded)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+
+            timer += Time.deltaTime;
+            if (timer >= JumpTime)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+               
+
+            }
+
+
+
         }
-        if (grounded)
+        else if (grounded)
         {
+            timer = 0;
             animator.SetBool("jumping", false);
-            canchange =true;
+            canchange = true;
             changelayer();
         }
     }
+
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -60,18 +75,18 @@ public class playermov : MonoBehaviour
             grounded = false;
         }
     }
-    IEnumerator lerpcode(float ypos,int layer,bool fore)
+    IEnumerator lerpcode(float ypos, int layer, bool fore)
     {
-       Vector2 NewPos;
-        
+        Vector2 NewPos;
+
 
         float timeElapsed = 0;
         rb.gravityScale = 0;
         while (timeElapsed < lerpDuration)
         {
-            Vector2 StartPos = new Vector2(transform.position.x,transform.position.y) ;
-            NewPos = new Vector2(transform.position.x, ypos+0.1f);
-             
+            Vector2 StartPos = new Vector2(transform.position.x, transform.position.y);
+            NewPos = new Vector2(transform.position.x, ypos + 0.1f);
+
             transform.position = Vector2.Lerp(transform.position, NewPos, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
 
