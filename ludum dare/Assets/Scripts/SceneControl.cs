@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class SceneControl : MonoBehaviour
 {
     public GameObject pausebox;
     private bool paused;
-    // Start is called before the first frame update
+    private AudioSource audio;
+    public Sprite OffSprite;
+    public Sprite OnSprite;
+    public Button but;
     void Start()
     {
-
+        audio = GameObject.FindObjectOfType<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +55,17 @@ public class SceneControl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
+    }
+
+    public void audiomute()
+    {
+        if (!audio.mute)
+            but.image.sprite = OffSprite;
+        else
+        {
+            but.image.sprite = OnSprite;
+        }
+        audio.mute = !audio.mute;
     }
     public void quitgame()
     {
