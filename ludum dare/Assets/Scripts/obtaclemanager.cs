@@ -9,10 +9,13 @@ public class obtaclemanager : MonoBehaviour
     public int mortes;
     public GameObject Ghost_Track;
     private GameObject track;
+    private deathmanager DeathManager;
     float distancePassed = 5;
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DeathManager = FindObjectOfType<deathmanager>();
+     
+
         contador = GameObject.Find("num").GetComponent<Text>();
         track = Ghost_Track;
 
@@ -22,7 +25,8 @@ public class obtaclemanager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-            mortes++;
+            DeathManager.deaths++;
+  
             Deathcounter(contador, mortes);
            track= Instantiate(Ghost_Track, transform.position, Quaternion.identity); 
 
@@ -32,7 +36,7 @@ public class obtaclemanager : MonoBehaviour
     void Deathcounter(Text text, int deaths)
     {
 
-        contador.text = "" + deaths;
+        contador.text = "" + DeathManager.deaths;
     }
 
 }
