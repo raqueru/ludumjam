@@ -12,6 +12,7 @@ public class obtaclemanager : MonoBehaviour
     float distancePassed = 5;
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         contador = GameObject.Find("num").GetComponent<Text>();
         track = Ghost_Track;
 
