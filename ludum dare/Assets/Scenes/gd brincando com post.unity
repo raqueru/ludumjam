@@ -611,6 +611,10 @@ PrefabInstance:
       propertyPath: playerspeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3269488932134268068, guid: 2cccb31dc1d25d74a94a0cbdcf7e9be2, type: 3}
+      propertyPath: Ghost_Track
+      value: 
+      objectReference: {fileID: 7282190357485280536, guid: a679f14e9193be640bf15f3ef6d29e45, type: 3}
     - target: {fileID: 3948097123855797206, guid: 2cccb31dc1d25d74a94a0cbdcf7e9be2, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1732,7 +1736,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.7}
   m_SpriteTilingProperty:
-    border: {x: 2.34, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 64.52, y: 5.1351366}
     newSize: {x: 64.52, y: 5.1351366}
@@ -2299,7 +2303,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -1.49, y: 0.7}
   m_SpriteTilingProperty:
-    border: {x: 2.34, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 64.52, y: 5.1351366}
     newSize: {x: 64.52, y: 5.1351366}
