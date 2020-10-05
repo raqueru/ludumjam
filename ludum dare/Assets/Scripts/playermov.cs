@@ -37,19 +37,14 @@ public class playermov : MonoBehaviour
             rb.velocity = jumpforce * Vector2.up;
             canchange = false;
         }
+
         if (!grounded)
         {
-
             timer += Time.deltaTime;
             if (timer >= JumpTime)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-
-
             }
-
-
-
         }
         else if (grounded)
         {
@@ -80,6 +75,9 @@ public class playermov : MonoBehaviour
     {
         Vector2 NewPos;
 
+        this.gameObject.layer = layer;
+        foregrounded = fore;
+        this.GetComponent<SpriteRenderer>().sortingOrder = layerpos;
 
         float timeElapsed = 0;
         rb.gravityScale = 0;
@@ -96,9 +94,7 @@ public class playermov : MonoBehaviour
         NewPos = new Vector2(transform.position.x, ypos + 0.1f);
         transform.position = NewPos;
         rb.gravityScale = 1;
-        this.gameObject.layer = layer;
-        foregrounded = fore;
-        this.GetComponent<SpriteRenderer>().sortingOrder = layerpos;
+        
         yield return null;
 
     }

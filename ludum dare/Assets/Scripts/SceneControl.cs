@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
+    public GameObject pausebox;
+    private bool paused;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,7 +20,23 @@ public class SceneControl : MonoBehaviour
         {
             restartgame();
         }
+        PauseGame();
+    }
+    public void PauseGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            if(!paused)
+        {
+            pausebox.SetActive(true);
+            Time.timeScale = 0;
+            paused = true;
 
+        }
+            else{
+                pausebox.SetActive(false);
+                Time.timeScale = 1;
+                paused = false;
+            }
     }
     public void restartgame()
     {
@@ -31,7 +49,7 @@ public class SceneControl : MonoBehaviour
         if (collision.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-           
+
         }
     }
 }
