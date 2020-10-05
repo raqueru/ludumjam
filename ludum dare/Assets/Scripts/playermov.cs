@@ -10,7 +10,7 @@ public class playermov : MonoBehaviour
     public float playerspeed;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private bool grounded;
+    public bool grounded;
     public Transform ground;
     public Transform foreground;
     private bool foregrounded = false;
