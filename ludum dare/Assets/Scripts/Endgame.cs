@@ -9,6 +9,8 @@ public class Endgame : MonoBehaviour
     private bool win;
     public GameObject endPannel;
     public Text Panneltext;
+    public GameObject happynico;
+    public GameObject sadnico;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -20,13 +22,15 @@ public class Endgame : MonoBehaviour
                 PauseGame();
 
                 Panneltext.text = "Voce ganhou!!";
-                   
+                happynico.SetActive(true);
+
             }
             else
             {
                 win = false;
                 PauseGame();
                 Panneltext.text = "Voce perdeu!!";
+                sadnico.SetActive(true);
             }
             }
     }
