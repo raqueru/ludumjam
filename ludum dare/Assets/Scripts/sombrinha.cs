@@ -8,6 +8,9 @@ public class sombrinha : MonoBehaviour
     public GameObject myDad;
     Transform myTransform;
 
+    [SerializeField]
+    Vector3 initialDadTransform;
+
 
     public Vector3 scaleToGo;
     public Vector3 scaleOriginal;
@@ -16,13 +19,17 @@ public class sombrinha : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         myDad = transform.parent.gameObject;
+        initialDadTransform = myDad.transform.position;
         myTransform = GetComponent<Transform>();
     }
         // Update is called once per frame
      void FixedUpdate()
      {
+        Vector3 dadNewTransform = myDad.transform.position;
+
+        LocalPositionY(dadNewTransform);
+
         if (myDad.transform.tag == "Player")
         {
             if (myDad.layer == 8)
@@ -48,7 +55,9 @@ public class sombrinha : MonoBehaviour
 
         }
 
-        
+
+
+
      }
 
     IEnumerator LerpScaleUp(Vector3 targetScale, float duration)
@@ -77,6 +86,22 @@ public class sombrinha : MonoBehaviour
             yield return null;
         }
         myTransform.localScale = targetScaleDown;
+    }
+
+    void LocalPositionY(Vector3 dadNewTransform)
+    {
+        Vector3 differenceDad = (dadNewTransform - initialDadTransform);
+        float newY = -differenceDad.y * 2;
+
+        if (dadNewTransform.y > initialDadTransform.y + 1)
+        { 
+            myTransform.localPosition = new Vector3(0,newY, 0);
+        }
+        else if (myTransform.localPosition.y >= -2)
+        {
+            myTransform.localPosition = new Vector3(0, -2, 0);
+        }
+
     }
 }
 

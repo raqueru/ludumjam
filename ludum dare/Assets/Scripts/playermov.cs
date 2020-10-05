@@ -10,7 +10,7 @@ public class playermov : MonoBehaviour
     public float playerspeed;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private bool grounded;
+    public bool grounded;
     public Transform ground;
     public Transform foreground;
     private bool foregrounded = false;
@@ -44,7 +44,7 @@ public class playermov : MonoBehaviour
             if (timer >= JumpTime)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-               
+
 
             }
 
@@ -54,7 +54,7 @@ public class playermov : MonoBehaviour
         else if (grounded)
         {
             timer = 0;
-            animator.SetBool("jumping", false);
+
             canchange = true;
             changelayer();
         }
@@ -66,6 +66,7 @@ public class playermov : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             grounded = true;
+            animator.SetBool("jumping", false);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -113,7 +114,7 @@ public class playermov : MonoBehaviour
             float foregroundcentery = foreground.GetComponent<BoxCollider2D>().bounds.center.y;
             float foregroundyupper = foregroundcentery + foregroundhalfy;
             Vector3 NewPos = new Vector3(transform.position.x, foregroundyupper + playerboxhalf);
-            StartCoroutine(lerpcode(foregroundyupper + playerboxhalf, 8, true,0));
+            StartCoroutine(lerpcode(foregroundyupper + playerboxhalf, 8, true, 0));
 
 
         }
@@ -124,7 +125,7 @@ public class playermov : MonoBehaviour
             float groundcentery = ground.GetComponent<BoxCollider2D>().bounds.center.y;
             float groundyupper = groundcentery + groundhalfy;
             Vector2 NewPos = new Vector2(transform.position.x, groundcentery + playerboxhalf);
-            StartCoroutine(lerpcode(groundyupper + playerboxhalf, 0, false,1));
+            StartCoroutine(lerpcode(groundyupper + playerboxhalf, 0, false, 1));
 
         }
     }
