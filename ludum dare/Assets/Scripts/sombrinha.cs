@@ -56,10 +56,12 @@ public class sombrinha : MonoBehaviour
             if (myDad.layer == 8)
             {
                 myTransform.localScale = new Vector3(.4f, .4f, 1);
+                EnemyFore(dadTransformFore);
             }
             else
             {
                 myTransform.localScale = new Vector3(.6f, .6f, 1);
+                EnemyGround(dadNewTransform);
             }
         }
     }
@@ -134,12 +136,41 @@ public class sombrinha : MonoBehaviour
                 {
                     myTransform.localPosition = new Vector3(0, -2, 0);
                 }
-            } 
+            }
             else
             {
                 myTransform.localPosition = new Vector3(0, -2, 0);
             }
         }
     }
-}
 
+    void EnemyGround(Vector3 dadNewTransform)
+    {
+
+        Vector3 differenceDad = (dadNewTransform - initialDadTransform);
+        float newY = -differenceDad.y * 2;
+
+        myTransform.localPosition = new Vector3(0, -2.5f + newY, 0);
+
+        if (myTransform.localPosition.y > -3)
+        {
+            myTransform.localPosition = new Vector3(0, -3, 0);
+        }
+
+    }
+
+    void EnemyFore(Vector3 dadTransformFore)
+    {
+
+        Vector3 differenceDad = (dadTransformFore - initialDadTransform);
+        float newY = -differenceDad.y * 2;
+
+        myTransform.localPosition = new Vector3(0, -2.5f + newY, 0);
+
+        if (myTransform.localPosition.y > -3)
+        {
+            myTransform.localPosition = new Vector3(0, -3, 0);
+        }
+
+    }
+}
