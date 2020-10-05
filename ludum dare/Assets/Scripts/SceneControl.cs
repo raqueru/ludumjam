@@ -48,14 +48,7 @@ public class SceneControl : MonoBehaviour
         SceneManager.LoadScene(currentscene);
         Time.timeScale = 1;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-        }
-    }
+    
 
     public void audiomute()
     {
