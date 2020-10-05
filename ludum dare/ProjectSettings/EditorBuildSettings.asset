@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/gd brincando com post.unity
+    guid: 26176831faa586d49a5de45c7b00c6df
+  - enabled: 1
+    path: Assets/Scenes/cena2.unity
+    guid: 924695db11abfe74a842563740434581
+  - enabled: 1
+    path: Assets/Scenes/cena3.unity
+    guid: 4a03443a1b87ec64192839b5fb0b849b
+  - enabled: 1
+    path: Assets/Scenes/cena4.unity
+    guid: ec431da6603892744921059979d03b88
   m_configObjects: {}
