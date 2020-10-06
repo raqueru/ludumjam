@@ -88,13 +88,12 @@ public class playermov : MonoBehaviour
             transform.position = Vector2.Lerp(transform.position, NewPos, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
 
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
         NewPos = new Vector2(transform.position.x, ypos + 0.1f);
         transform.position = NewPos;
         rb.gravityScale = 1;
-        
-        yield return null;
+     
 
     }
 

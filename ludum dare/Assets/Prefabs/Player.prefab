@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mortes: 0
+  Ghost_Track: {fileID: 0}
 --- !u!95 &3948097123855797206
 Animator:
   serializedVersion: 3

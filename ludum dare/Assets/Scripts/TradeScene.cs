@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class TradeScene : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private GameObject player;
+
+    private void Start()
     {
-        if (collision.tag == "Player")
+        player = FindObjectOfType<playermov>().gameObject;
+    }
+    private void Update()
+    {
+      
+    
+        if (player.transform.position.x > transform.position.x)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
         }
     }
+   
 }
