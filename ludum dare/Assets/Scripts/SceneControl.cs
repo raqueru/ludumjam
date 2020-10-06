@@ -12,9 +12,11 @@ public class SceneControl : MonoBehaviour
     public Sprite OffSprite;
     public Sprite OnSprite;
     public Button but;
+    public deathmanager deathManager;
     void Start()
     {
         audio = GameObject.FindObjectOfType<AudioSource>();
+        deathManager = FindObjectOfType<deathmanager>();
     }
 
     // Update is called once per frame
@@ -46,7 +48,9 @@ public class SceneControl : MonoBehaviour
     {
         string currentscene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(0);
+
         Time.timeScale = 1;
+        deathManager.deaths = 0;
     }
     
 

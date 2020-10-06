@@ -13,16 +13,19 @@ public class Endgame : MonoBehaviour
     public GameObject sadnico;
     public deathmanager deathsss;
     public int mortes;
-
+    private GameObject player;
 
     private void Start()
     {
         deathsss = FindObjectOfType<deathmanager>();
 
+        player = FindObjectOfType<playermov>().gameObject;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+   void Update()  
     {
-        if (collision.gameObject.tag == "Player")
+        if (player.transform.position.x>transform.position.x)
         {
             cutscene.SetActive(false);
             Panneltext = endPannel.transform.GetChild(0).GetComponent<Text>();
