@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EndImage : MonoBehaviour
 {
-    public int mortemax;
+    private Endgame end;
     public Texture goodending;
     public Texture badending;
     private deathmanager deathsmanager;
@@ -13,12 +13,13 @@ public class EndImage : MonoBehaviour
     void Start()
     {
         deathsmanager = FindObjectOfType<deathmanager>();
+        end= FindObjectOfType<Endgame>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (deathsmanager.deaths < mortemax)
+        if (deathsmanager.deaths < end.mortes)
         {
             this.GetComponent<RawImage>().texture = goodending;
         }

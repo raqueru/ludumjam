@@ -6,13 +6,25 @@ using UnityEngine.Playables;
 public class CutsceneActiave : MonoBehaviour
 {
     public PlayableDirector cutscene;
-    // Start is called before the first frame update
-    private void OnTriggerEnter2D(Collider2D collision)
+    private GameObject player;
+    private bool end=false;
+
+    private void Start()
     {
-        if (collision.tag == "Player")
-        {
-            cutscene.gameObject.SetActive(true);
-            cutscene.Play();
-        }
+        player = FindObjectOfType<playermov>().gameObject;
     }
-}
+    private void Update()
+    {
+
+
+        if (player.transform.position.x > transform.position.x)
+            if (!end)
+            {
+                cutscene.gameObject.SetActive(true);
+                cutscene.Play();
+                end = true;
+            }
+        }
+
+    }
+

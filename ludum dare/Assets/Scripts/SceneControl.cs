@@ -45,7 +45,7 @@ public class SceneControl : MonoBehaviour
     public void restartgame()
     {
         string currentscene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentscene);
+        SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
     
